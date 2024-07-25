@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<style>/* styles.css */
+  .imgAcess img{
+    width: 40vw;
+    height: 30vw;
+   margin-top: 3vw;
+    cursor: pointer;
+  } 
+    .imgIcon {
+      display: inline-block;
+      /* Adiciona esta propriedade para tornar o elemento em linha */
+      margin-right: 10px;
+      /* Adapte a margem conforme necessário para espaçamento entre os ícones */
+    }
+
+  .imgIcon img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50px;
+    border: 2px solid black;
+    width: 4vw;
+    height: 4vw;
+
+  }
+  
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+
+.product-image img {
+  height: 40vw;
+  width:130vw;
+  /* object-fit: cover; */
+ /* max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left:0 1vw;*/
+}
+
+
+  /*botao*/
+.product-actions {
+  display: flex;
+   margin-left: 2vw;
+
+}
+
+.product-actions button {
+  margin-bottom: 10px;
+  padding: 1vw 2vw;
+  background-color: #800080;
+  color: white;
+  border: 3px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+   margin-right: 1vw;
+   transition: all linear 160ms;
+  font-size: 15px;
+}
+
+  .product-actions button:hover { 
+    transform: scale(1.05);
+    background-color: #0300bd;;
+
+  }
+
+/*mexi aqio*/
+.btn1 {
+    margin-bottom: 10px;
+    padding: 1vw 2vw;
+    background-color: #800080;
+    color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+     margin-right: 1vw;
+     transition: all linear 160ms;
+    font-size: 15px;
+
+  }
+
+.btn1:hover { 
+      transform: scale(1.05);
+      background-color: #0300bd;;
+
+    }
+
+
+
+.product-details {
+  text-align: center;
+   margin-left: 3vw;
+
+} 
+p{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+#t{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+
+}
+  #mensagem textarea {
+    width: 70vw;
+    height:15vw;
+
+  }
+
+.estrelasTudo{
+   display: flex;
+  margin-left: 13vw
+}
+.estrelas{
+   font-size: 30px;
+
+}
+.estrelas:hover{
+  color:yellow
+}
+  /*sliderflores*/
+
+  .slide img {
+    width: 140vw;
+    height: 40vw;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 2vw;
+    border: 1px solid black;
+  }
+
+  [data-component="slideshow"] .slide {
+    display: none;
+  }
+
+  [data-component="slideshow"] .slide.active {
+    display: block;
+  }
+
+
+  .cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2vw;
+
+  }
+  
+  .imgCliente {
+      display: inline-block;
+      /* Adiciona esta propriedade para tornar o elemento em linha */
+      margin-right: 10px;
+      /* Adapte a margem conforme necessário para espaçamento entre os ícones */
+    }
+
+  .imgCliente img{
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 50px;
+      border: 2px solid black;
+      width: 9vw;
+      height: 8vw;
+
+    }
+  
+
+</style>
+<body>
+  <header class="headrer">
+    <h1>Floricultura Bella's Flores</h1>
+    <br>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="info.html">Informações</a></li>
+         <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+
+    <div id="divcarrinho">
+      <a href="login.html"><img src="login.png" alt="login" width="90px" height="50px"></a>
+      <a href="car.html"><img id="carrinho" src="5087784.png" alt="car"></a>
+    </div>
+
+  </header>
+<br><br>
+<div class="containertudo" style="display: flex; flex-direction: row;">
+
+  <!-- aqui imagem-->
+
+  <div id="slideshow-example" data-component="slideshow">
+    <div role="list">
+      <div class="slide">
+        <img src="img/imageKit6.jpg">
+      </div>
+      <div class="slide">
+        <img src="flores/iimageFerramentas.webp">
+      </div>
+      <div class="slide">
+        <img src="img/imageKit2.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <div class="product-details">
+      <h2>
+      Maleta de Jardinagem com 10 Peças: Seu Kit Completo para Cultivar Beleza em Casa</h2><br><br>
+      <p>Apresentamos a Maleta de Jardinagem com 10 Peças, a companheira essencial para todos os amantes de plantas e jardins. Este kit cuidadosamente selecionado não é apenas uma ferramenta, mas sim um convite para cultivar um pedaço da natureza em sua própria casa.
+        <br><br>
+      Composta por 10 instrumentos especializados, esta maleta é um tesouro para entusiastas da jardinagem, desde iniciantes até experientes. As ferramentas de alta qualidade são projetadas para tornar cada momento no jardim uma experiência prazerosa e eficiente.
+        <br><br>
+      O conjunto inclui tudo o que você precisa para plantar, cultivar e cuidar das suas plantas com facilidade. Desde pás e tesouras até regadores e marcadores de plantas, cada peça foi escolhida para oferecer funcionalidade e durabilidade. A maleta em si é um toque de elegância, proporcionando praticidade com estilo.
+       
+      
+    </p><br><br>
+      <p style="color: red">Preço: $127.99</p>
+      <p>Disponibilidade: Em Estoque</p>
+    </div>
+
+
+</div>
+
+
+
+  <div class="estrelasTudo">
+    <div class="estrelas">
+    &#9733;
+    &#9733;
+    &#9733;
+    &#9733; 
+    &#9733;
+  </div>
+    </div>
+   <br>
+
+  <div class="product-actions">
+    <button onclick="comprarProduto()">Comprar</button>
+    <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+    <button onclick="favoritarProduto()">Favoritar</button>
+  </div>
+
+
+
+  <div class="comentarios" style="display: flex; justify-content: center; justify-items: center;">
+
+  <div id="mensagem" style="margin-top: 50px;">
+       <center> <h1 class="texto" style="text-align: center;">Deixe sua avaliação: </h1></center>
+    <textarea id="t" rows=15 cols=30 placeholder="Deixe aqui seu comentario"></textarea>
+
+    <button class="btn1">Enviar</button>
+
+  </div>
+</div>
+</div> 
+
+  <br><hr> <br>
+
+
+   <div class="cont">
+    <div class="imgCliente"><img src="img/imageCli2.jpg"/></div>
+    <div class="txt"><h2 style="color: #800080;">Hisoka Morow</h2><p>"Adorei o design da maleta, é prática e fácil de carregar. As ferramentas são de alta qualidade, realmente vale o investimento."</p></div>
+    </div>
+
+
+   <br><hr><br>
+
+
+  <div class="cont">
+  <div class="imgCliente"><img src="img/imageCli3.jpg"/></div>
+  <div class="txt"><h2 style="color: #800080;">Roronoa Zoro</h2><p>"Essa maleta de jardinagem é incrível! As ferramentas são duráveis e funcionais, tornando a jardinagem muito mais fácil, adorei."</p></div>
+  </div>
+
+  <br><hr><br>
+
+
+   <div class="cont">
+    <div class="imgCliente"><img src="img/imageCli.jpg"/></div>
+    <div class="txt"><h2 style="color: #800080;">Harry Styles</h2><p>"Comprei essa maleta para presentear minha mãe, e ela simplesmente adorou! As peças são úteis e bem feitas estou muio feliz. ❤ ❤ </p></div>
+    </div>
+
+
+  <br><hr><br>
+
+
+
+
+
+  
+  <footer>
+    <br>
+    <nav class="nav">
+        <ul>
+
+
+          <div onclick="acao(this)"><li><a class="pModal">Contato</a></li></div>
+
+
+          <div class="modal">
+              <div onclick="fechar(this)" class="fechar"><span>X</span></div>
+              <h2 class="h2Modal">Contatos</h2>
+              <br><br>
+
+
+            <h2 class="h2Modal">Telefones:</h2>
+
+              <p class="pModal">(21) 97400-6710<br>(21) 99589-7270<br>(21) 99136-7041<br><br></p>
+
+            <h2 class="h2Modal">E-mails:</h2>
+            <p class="pModal">bellasFlores@gmail.com<br>bellasFlores@hotmail.com<br></p>
+            <br><br>
+
+             <h2 class="h2Modal"> Endereços onde nossas lojas se encontram:</h2>
+            <p class="pModal"> Avenida Principal, 101 - Riverside<br>Rua das Acácias, 123 - Willow Springs<br>Alameda das Flores, 234 - Maplewood</p>
+
+             <br>
+
+            <h2 class="h2Modal">Nossas Redes Sociais:</h2>
+          
+            <div class="icones">
+               <a href="https://www.instagram.com/"><div class="imgIcon" ><img src="img/imageInsta.png"/></div></a>
+              <a href="https://www.facebook.com/"><div class="imgIcon"><img src="img/imageFace.webp"/></div></a>
+               <a href="https://www.twitter.com/"><div class="imgIcon"><img src="img/imageTT.png" alt="Twitter"></div></a>
+              <a href="https://web.whatsapp.com/"><div class="imgIcon"><img src="img/imaheWhats.png"/></div></a>
+            </div>
+
+
+
+          </div>
+
+            <li><a href="ad.html" class="pModal">Ajuda e Documentação</a></li>
+            <li><a class="pModal">Termos e Condições</a></li>
+            <li><a class="pModal">Política de Segurança</a></li>
+            <li><a href ="ad.html" class="pModal">Trocas e Devoluções</a></li>
+        </ul>
+    </nav>
+
+    <br><br>
+
+    <a href="https://www.instagram.com/"><div class="imgIcon2"><img src="img/imageInsta.png" alt="Instagram"></div></a>
+    <a href="https://www.facebook.com/"><div class="imgIcon2"><img src="img/imageFace.webp" alt="Facebook"></div></a>
+    <a href="https://www.twitter.com/"><div class="imgIcon2"><img src="img/imageTT.png" alt="Twitter"></div></a>
+      <a href="https://web.whatsapp.com/"><div class="imgIcon2"><img src="img/imaheWhats.png"/></div></a>
+    <div class="imgIcon2"><img src = "img/imageVoz.png"/></button></div> 
+
+        <div class="imgIcon2">
+          <div onclick="acao(this)"><img src="img/libras.png" /></div>
+
+          <div class="modal">
+            <div onclick="fechar(this)" class="fechar"><span>X</span></div><br><br>
+            <h2 class="h2Modal">Acessibilidade</h2>
+            <br>
+
+      <center><div class="imgAcess"><img src="imageAcess2.jpg"/></div></center>
+         <p class="pModal">Deseja ter acessibilidade em libras?</p> <br><br>
+            <input type="submit" value="Sim" class="btn2" /> </center>
+             <input type="submit" value="Não" class="btn2" /> </center>
+          </div>
+    </div>
+
+    <br><br>
+    <p>&copy; 2023 Venda de Flores</p>
+  </footer>
+
+  <div class="chat-button" id="chat-button">
+    <i class="fas fa-comment-alt"></i>
+    <span>Chat de Suporte</span>
+  </div>
+
+  <!-- Conteúdo do chat (inicialmente oculto) -->
+  <div class="chat-box" id="chat-box">
+    <div class="chat-header">
+      Chat de Suporte
+      <button id="close-chat" class="close-button">Fechar</button>
+    </div>
+    <div class="chat-messages">
+      <!-- Aqui você pode adicionar as mensagens do chat -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="message-input" placeholder="Digite sua mensagem...">
+      <button id="send-message" class="send-button">Enviar</button>
+    </div>
+  </div>
+
+  <!-- Importando o arquivo JavaScript externo -->
+
+  <script src="script.js"></script>
+  <script src="carrosel.js"></script>
+   <script src="modal.js"></script>
+   <script src="prod.js"></script>
+</body>
+
+</html>

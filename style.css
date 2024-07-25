@@ -1,0 +1,878 @@
+/* Reset de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btncar {
+  background-color: #800080;
+  color: white;
+  padding: 1em 1em;
+  border: none;
+  cursor: pointer;
+}
+
+.btncar:hover {
+  background-color: #d12323;
+}
+
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/*.login{
+  background: transparent;
+  border: 0px;
+  display: flex;
+  flex-direction: column;
+}*/
+body {
+  font-family: Arial, sans-serif;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #800080;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border: 3px solid black;
+}
+
+ul li a {
+  font-size: 26px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav ul li a:hover {
+  color: #ffffff;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+/* .inicioAb{
+  background-color: #c7feff;
+  border-radius: 20px;
+  border: 2px solid black;
+  width: 300px; 
+  height: 200px;
+} */
+
+footer {
+  background-color: #D1F3C5;
+  color: black;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Seus estilos CSS existentes */
+
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #800080;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.chat-button i {
+  font-size: 24px;
+}
+
+/* Estilos CSS para o chat (inicialmente oculto) */
+.chat-box {
+  display: none;
+  position: fixed;
+  bottom: 85px;
+  /* Ajuste a posição para ficar acima do botão de chat */
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.chat-header {
+  background-color: #800080;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.close-button {
+  background-color: #361eae;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  float: right;
+}
+
+.chat-messages {
+  padding: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.chat-input {
+  padding: 10px;
+  text-align: center;
+}
+
+.send-button {
+  background-color: #361eae;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/*#divcarrinho{
+  display: flex;
+  flex-direction: row;
+  width: 50wh;
+  height: 50vh;
+}
+#carrinho{
+  width: 50px;
+  height: 50px;
+  /* margin-right: 150px; 
+  object-fit: contain;
+}*/
+/* Adicione uma nova classe para o contêiner do login e carrinho */
+#divcarrinho {
+  display: grid;
+  grid-template-columns: 50px 50px;
+  /* Duas colunas, uma para login e outra para carrinho */
+  align-items: center;
+  margin-right: 50px;
+  justify-content: flex-end;
+  /* Centraliza os itens verticalmente */
+  /* Alinha os itens à direita */
+  gap: 50px;
+  /* Adiciona algum espaçamento entre login e carrinho */
+}
+
+.login {
+  background: transparent;
+  border: 0px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#carrinho {
+  width: 50px;
+  height: 50px;
+}
+
+/* O restante dos seus estilos permanece inalterado */
+
+.slide img {
+  width: 100vw;
+  height: 25vw;
+  object-fit: cover;
+}
+
+[data-component="slideshow"] .slide {
+  display: none;
+}
+
+[data-component="slideshow"] .slide.active {
+  display: block;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  margin-left: 10px;
+  /* Espaçamento entre o slider e os botões */
+  color: greenyellow;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 5px;
+
+}
+
+.containerbtn {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  margin-top: 15px;
+
+}
+
+.prev,
+.next {
+  background-color: green;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: indianred;
+}
+
+.slider-container2 {
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.slider2 {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+#titulo1 {
+  color: darkred;
+  /* Cor do texto */
+  cursor: pointer;
+  overflow: hidden;
+  animation: blink 1s linear infinite;
+  /* Adiciona a animação de piscar */
+  font-size: 2vw;
+  text-align: center;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  text-shadow: 2px 2px 5px red;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.products1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  gap: 20px;
+  justify-content: center;
+  min-width: 100%;
+}
+
+.product1 {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+.product1 img {
+  max-width: 100%;
+}
+
+.price1 {
+  font-weight: bold;
+}
+
+.buy-button1 {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.buy-button1:hover {
+  background-color: #d12323;
+}
+
+
+/*links na parte de navegação*/
+.sessão {
+  padding: 5px 30px;
+}
+
+.tab-links {
+  background-color: #fd86c0;
+  list-style-type: none;
+  border: 2px solid black;
+  border-radius: 25px;
+  text-align: center;
+  width: 15vw;
+  height: 18vw;
+
+}
+
+.tab-links button {
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 2vw;
+  color: black;
+  background-color: #fd86c0;
+  cursor: pointer;
+  border: none;
+  margin: 5px;
+  width: 13vw;
+  height: 5vw;
+}
+
+.tab-links button:hover {
+  background-color: #D1F3C5;
+  border: 2px solid black;
+
+}
+
+.tab-links button.active {
+  background-color: #D1F3C5;
+  border: 2px solid black;
+}
+
+.tab-contents section {
+  display: none;
+}
+
+/*fim links*/
+
+.img2 img {
+  /*imagem principal*/
+  width: 150vw;
+  height: 19vw;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 5px 5px 25px 4px #800080;
+}
+
+.img1 img {
+  /*imagem dos produtos*/
+  margin-top: 15px;
+  /* border: 1px solid black; */
+  width: 15vw;
+  height: 20vw;
+  /* cursor: pointer; */
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+.img3 img {
+  /*img do inicio prod*/
+  width: 48vw;
+  height: 48vw;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+
+.tudo1 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 8 / 4;
+}
+
+.div2 {
+  grid-area: 1 / 4 / 8 / 7;
+}
+
+
+.tudo2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div3 {
+  grid-area: 1 / 1 / 8 / 4;
+}
+
+.div4 {
+  grid-area: 1 / 4 / 8 / 7;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.img1 img {
+  /*img flores*/
+  width: 20vw;
+  height: 20vw;
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+
+.elementos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  gap: 20px;
+}
+
+
+#flores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+
+
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.product:hover {
+  box-shadow: 5px 5px 30px 4px #b6ff9e;
+  /*box-shadow: 5px 5px 30px 4px #800080;*/
+}
+
+
+.price {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Pacifico', cursive;
+}
+
+.buy-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  font-size: 20px;
+
+}
+
+.buy-button:hover {
+  background-color: #d12323;
+}
+
+.p-Info {
+  font-size: 2vw;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+.h1info {
+  font-size: 3vw;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+.h2flores {
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+.h2info {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+
+.h2Prod {
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+.h2flores {
+  color: black;
+  position: relative;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.h2flores::after {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 4px;
+  background-color: #c90bfe;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.h2info {
+  color: #800080;
+}
+
+
+.rodape2 a {
+  padding: 10px;
+}
+
+
+
+
+.h2Modal {
+  font-size: 2em;
+  color: black;
+  font-family: 'Pacifico', cursive;
+}
+
+.imageModal img {
+  width: 50vw;
+  height: 18vw;
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
+.pModal {
+  font-size: 25px;
+  font-family: 'Pacifico', cursive;
+  cursor: pointer;
+}
+
+.modal {
+  border-radius: 25px;
+  border: 3px solid black;
+   width: 70%;
+  height: 97%; 
+  /* width: 70vw;
+  height: 55vw; */
+  animation: animate;
+  animation-duration: 800ms;
+  background-color: #ffd6f6;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.modal img{
+  width: 50vw;
+  height: 40vw;
+ margin-top: 3vw;
+  cursor: pointer;
+}
+
+@keyframes animate {
+
+  from {
+    opacity: 1;
+  }
+
+  from {
+    opacity: 0;
+  }
+}
+
+
+.fechar {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(168, 249, 255, 0.9);
+  border-radius: 55%;
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Pacifico', cursive;
+  border: 2px solid black;
+}
+
+.fechar span {
+  color: rgba(255, 0, 0, 0.9);
+}
+
+
+.imgFlores img {
+  margin-left: 40px;
+  color: black;
+  text-align: center;
+  border-radius: 15px;
+  border: 3px solid black;
+  width: 25vw;
+  height: 25vw;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+
+.gerbera {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.gerbera1 {
+  grid-area: 1 / 1 / 5 / 3;
+}
+
+.gerbera2 {
+  grid-area: 1 / 3 / 5 / 7;
+  margin-right: 50px;
+}
+
+
+
+.crisantemo {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.crisantemo1 {
+  grid-area: 1 / 1 / 5 / 3;
+}
+
+.crisantemo2 {
+  grid-area: 1 / 3 / 5 / 7;
+  margin-right: 50px;
+}
+
+
+
+.hortensia {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.hortensia1 {
+  grid-area: 1 / 1 / 5 / 3;
+}
+
+.hortensia2 {
+  grid-area: 1 / 3 / 5 / 7;
+  margin-right: 50px;
+}
+
+
+.begonia {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.begonia1 {
+  grid-area: 1 / 1 / 5 / 3;
+}
+
+.begonia2 {
+  grid-area: 1 / 3 / 5 / 7;
+  margin-right: 50px;
+}
+
+
+
+.dicas {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.dicas1 {
+  grid-area: 1 / 1 / 6 / 5;
+  border: 3px solid black;
+  height: 23vw;
+  width: 45vw;
+}
+
+.dicas2 {
+  grid-area: 1 / 5 / 6 / 9;
+
+  border: 3px solid black;
+  width: 45vw;
+}
+
+
+
+.dica {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.dica1 {
+  grid-area: 1 / 1 / 6 / 5;
+  border: 3px solid black;
+  height: 23vw;
+  width: 45vw;
+}
+
+.dica2 {
+  grid-area: 1 / 5 / 6 / 9;
+
+  border: 3px solid black;
+  width: 45vw;
+}
+
+
+
+.dic {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.dic1 {
+  grid-area: 1 / 1 / 6 / 5;
+  border: 3px solid black;
+  height: 23vw;
+  width: 45vw;
+}
+
+.dic2 {
+  grid-area: 1 / 5 / 6 / 9;
+
+  border: 3px solid black;
+  width: 45vw;
+}
+
+
+
+
+.tudoVideo {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.video1 {
+  grid-area: 1 / 1 / 5 / 3;
+  margin-left: 5vw
+}
+
+.video2 {
+  grid-area: 1 / 3 / 5 / 7;
+  margin-left: 15vw;
+}
+
+
+.imgIcon {
+  display: inline-block;
+  /* Adiciona esta propriedade para tornar o elemento em linha */
+  margin-right: 10px;
+  /* Adapte a margem conforme necessário para espaçamento entre os ícones */
+}
+
+.imgIcon img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50px;
+  border: 2px solid black;
+  width: 5vw;
+  height: 5vw;
+
+}
+
+
+.imgIcon2 {
+  display: inline-block;
+  /* Adiciona esta propriedade para tornar o elemento em linha */
+  margin-right: 10px;
+  /* Adapte a margem conforme necessário para espaçamento entre os ícones */
+}
+
+.imgIcon2 img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50px;
+  border: 2px solid black;
+  width: 4vw;
+  height: 4vw;
+
+}
+
+.im img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 28vw;
+  height: 25vw;
+}
+
+
+
+   .btn2 {
+    background-color: #800080;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+     /* border: none !important;  */
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+    padding: 1vw 2vw;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid black;
+    border-radius: 15px;
+
+  }
+
+  .btn2:hover {
+    transform: scale(1.05);
+    background-color: #0300bd;
+  } 

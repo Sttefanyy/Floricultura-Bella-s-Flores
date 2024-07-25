@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+  <style>
+    .imgAcess img{
+      width: 40vw;
+      height: 30vw;
+     margin-top: 3vw;
+      cursor: pointer;
+    } 
+    .imgIcon {
+      display: inline-block;
+      /* Adiciona esta propriedade para tornar o elemento em linha */
+      margin-right: 10px;
+      /* Adapte a margem conforme necessário para espaçamento entre os ícones */
+    }
+
+    .imgIcon img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 50px;
+      border: 2px solid black;
+      width: 4vw;
+      height: 4vw;
+
+    }
+  </style>
+<body>
+
+
+  <header>
+    <h1>Floricultura Bella's Flores</h1><br>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="info.html">Informações</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+
+
+    <div id="divcarrinho">
+      <a href="login.html"><img src="login.png" alt="login" width="90px" height="50px"></a>
+
+      <a href="car.html"><img id="carrinho" src="5087784.png" alt="car"></a>
+    </div>
+
+
+  </header>
+
+
+  <div class="page">
+    <div class="header">
+
+      <div class="sessão">
+        <div class="tab-links">
+          <button data-id="flores" data-imagem="img/imageFlores.jpg">Flores</button>
+          <button data-id="plantas" data-imagem="img/imagePlantas.jpg">Plantas</button>
+          <button data-id="acessorios" data-imagem="img/imageAcess.jpg">Acessorios</button>
+        </div>
+      </div>
+
+
+      <div class="img2">
+        <img src="img/bannerdesktop3.jpg">
+      </div>
+
+    </div>
+
+
+    <div class="tab-contents">
+
+
+
+      <section id="flores">
+
+        <div class="elementos">
+
+          <div class="product">
+            <div class="img1"><img src="img/image1.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Arranjo 24 <br>Rosas Rosa</h2>
+            <p class="price">$149.99</p>
+            <a href="prod.html"><button class="buy-button">Comprar</button></a>
+            <button class="btncar" onclick="adicionarItem('teste1', 10)">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image2.jpg" alt="Flor 2"></div>
+            <h2 class="h2Prod">Orquidea Phalaenopsis <br>Branca</h2>
+            <p class="price">$119.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image11.jpeg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Arranjo de 12 girassóis<br>e Vaso de Vidro</h2>
+            <p class="price">$99.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image37.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Buquê Garota de <br>Ipanema Com 40 Rosas</h2>
+            <p class="price">$192.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image3.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Arranjo Colorido<br>12 Rosas</h2>
+            <p class="price">$135.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image4.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Arranjo Vibrante<br> Luxo</h2>
+            <p class="price">$120.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image5.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Buquê Com 60 Rosas<br> Azuis</h2>
+            <p class="price">$256.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image6.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Arranjo de <br>Orquídeas</h2>
+            <p class="price">$348.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image7.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Arranjo de Rosas <br>e Chuva de Prata</h2>
+            <p class="price">$135.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image8.jpeg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Vaso de antúrio <br>plantado brancoa</h2>
+            <p class="price">$115.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image9.png" alt="Flor 1"></div>
+            <h2 class="h2Prod">Arranjo com 6 Orquídeas<br>Phaleanophis Lilás</h2>
+            <p class="price">$358.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image10.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Arranjo de Margaridas e<br> Vaso de Vidro</h2>
+            <p class="price">$124.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="flores/rosa v.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Rosas Vermelhas</h2>
+            <p class="price">$169.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image38.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Lírio Rosa Plantado</h2>
+            <p class="price">$82.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image39.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Flor da Fortuna Laranja</h2>
+            <p class="price">$56.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image40.jpeg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Buquê de Flores do Campo</h2>
+            <p class="price">$56.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image50.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Flores Silvestres Cor Rosa</h2>
+            <p class="price">$129.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image51.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Cesta de Violetas Roxas</h2>
+            <p class="price">$56.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image52.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Rosa Encantada Vermelha</h2>
+            <p class="price">$189.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image53.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Lírio Amarelo Plantado</h2>
+            <p class="price">$139.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+      <section id="plantas">
+
+        <div class="elementos">
+
+          <div class="product">
+            <div class="img1"><img src="img/image12.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Lírio-Da-Paz</h2>
+            <p class="price">$34.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image13.webp" alt="Flor 2"></div>
+            <h2 class="h2Prod">Bambu da Sorte</h2>
+            <p class="price">$56.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image14.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Birkin Philodendron</h2>
+            <p class="price">$15.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image23.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Kit Plantas Coníferas</h2>
+            <p class="price">$152.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image16.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Yucca Verde <br> Yucca gigantea</h2>
+            <p class="price">$32.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image17.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Pacová Philod-<br>endron martianum</h2>
+            <p class="price">$65.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image18.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Kayzuka Juniperus<br> chinensis "Torulosa"</h2>
+            <p class="price">$74.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image19.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Junco Azul Juncus<br>inflexus "Blue Dart"</h2>
+            <p class="price">$26.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image45.png" alt="Flor 1"></div>
+            <h2 class="h2Prod">Alecrim caixa com<br>15 mudas</h2>
+            <p class="price">$23.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image21.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Pata de Elefante <br> Beaucarnea recurvata</h2>
+            <p class="price">$25.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image22.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Lyrata Bambino <br> Ficus Lyrata 'Bambino'</h2>
+            <p class="price">$33.99</p>
+            <a href="prod2.html"><button class="buy-button">Comprar</button></a>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image15.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Croton Parafuso <br> Codiaeum variegatum</h2>
+            <p class="price">$47.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image41.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Muda Fllodendro Xanandu</h2>
+            <p class="price">$71.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image42.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Lança Trançada 6 Dedos</h2>
+            <p class="price">$23.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image43.png" alt="Flor 1"></div>
+            <h2 class="h2Prod">Pepêromia Prostata Pote</h2>
+            <p class="price">$23.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image20.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Kit Cedros Jacarés</h2>
+            <p class="price">$136.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image54.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Shimpaku Juníperus <br>chinensis “sargentii”</h2>
+            <p class="price">$36.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image55.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Mini Bambú <br> Fargesia adpressa</h2>
+            <p class="price">$32.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image56.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Tricolor <br> Dracaena Marginata</h2>
+            <p class="price">$38.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image57.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Serissa <br> Serissa foetida</h2>
+            <p class="price">$45.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+
+
+
+
+      <section id="acessorios">
+
+        <div class="elementos">
+
+          <div class="product">
+            <div class="img1"><img src="img/image24.webp" alt="Flor 1"></div>
+            <h2 class="h2Prod">Vaso Malta Redondo</h2>
+            <p class="price">$15.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image25.webp" alt="Flor 2"></div>
+            <h2 class="h2Prod">Vaso Rio 15 x 15 cm</h2>
+            <p class="price">$12.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image30.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Pá de jardim</h2>
+            <p class="price">$35.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image27.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Kit Jardinagem Manual</h2>
+            <p class="price">$29.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image32.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Kit de mangueira de <br>jardim com acessórios</h2>
+            <p class="price">$78.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image29.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Fita elástica para reparo<br> de árvores frutíferas</h2>
+            <p class="price">$37.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image26.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Kit Para Jardinagem<br>Bolsa De Lona 13 Peças</h2>
+            <p class="price">$135.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image31.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Luva de Jardinagem <br>Com Garras</h2>
+            <p class="price">$24.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image33.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Regador de Plantas<br> Com Bico De Flores </h2>
+            <p class="price">$15.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image34.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Suportes com vasos<br> para Flores jardim Vertical</h2>
+            <p class="price">$49.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image35.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Vaso Polietileno<br>Para Plantas</h2>
+            <p class="price">$45.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image36.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Fertilizante Adubo<br> Fortha</h2>
+            <p class="price">$12.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image46.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Jardinagem 10<br> Peças Maleta</h2>
+            <p class="price">$127.99</p>
+            <a href="prod3.html"><button class="buy-button">Comprar</button></a>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image47.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Bolsa de ferramentas<br> de jardim</h2>
+            <p class="price">$34.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image48.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Conjunto de ferramentas <br>de jardim</h2>
+            <p class="price">$54.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image49.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Luvas Para<br> Jardinagem</h2>
+            <p class="price">$54.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+
+          <div class="product">
+            <div class="img1"><img src="img/image58.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Pulverizador Manual</h2>
+            <p class="price">$79.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image59.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Argila Expandida </h2>
+            <p class="price">$74.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image60.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Conjunto de Ferramentas</h2>
+            <p class="price">$31.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product">
+            <div class="img1"><img src="img/image61.jpg" alt="Flor 1"></div>
+            <h2 class="h2Prod">Mangueira Super Flex</h2>
+            <p class="price">$31.99</p>
+            <button class="buy-button">Comprar</button>
+            <button class="btncar" onclick="adicionarItem()">Adicionar ao Carrinho</button>
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+    </div>
+
+  </div>
+  <!--div home-->
+
+  <div class="containerTudo">
+
+    <div class="containerTexto">
+
+      <h1 class=h1info>Temos kits, cestas, plantas diversas e muito mais</h1>
+      <br><br>
+      <p class="p-Info">Ao navegar pelo nosso site, você encontrará recomendações cuidadosamente selecionadas de plantas
+        do mais variados tipos. Cada recomendação é como um presente escolhido especialmente para você.</p>
+      <br><br>
+
+      <p class="p-Info">Estamos sempre atentos às necessidades e desejos dos nossos clientes, buscando superar
+        expectativas a cada visita ao nosso site. Seja para uma ocasião especial ou um gesto espontâneo, queremos que
+        cada flor que você escolha conosco seja mais do que um simples presente – queremos que seja uma experiência
+        memorável, envolta na beleza efêmera das flores.
+        <br><br>
+        Na floricultura, acreditamos que o cliente merece não apenas produtos excepcionais, mas também um atendimento
+        dedicado e uma jornada de compra única. Explore nosso catálogo diversificado, repleto de opções que refletem
+        nosso compromisso em tornar cada momento espec
+      </p>
+      <br><br>
+
+
+      <center>
+        <div class="tudo1">
+
+          <div class="div1">
+            <div class="img3"><img src="img/imageInicio.webp" /></div>
+          </div>
+
+          <div class="div2">
+            <div class="img3"><img src="img/imageInicio4.jpg" /></div>
+          </div>
+
+        </div>
+
+        <br>
+
+        <div class="tudo2">
+
+          <div class="div3">
+            <div class="img3"><img src="img/imageInivio2.webp" /></div>
+          </div>
+
+          <div class="div4">
+            <div class="img3"><img src="img/imageInicio3.jpeg" /></div>
+          </div>
+
+        </div>
+      </center>
+
+    </div>
+
+  </div>
+
+  <br>
+
+  <footer>
+    <br>
+    <nav class="nav">
+        <ul>
+
+
+          <div onclick="acao(this)"><li><a class="pModal">Contato</a></li></div>
+
+
+          <div class="modal">
+              <div onclick="fechar(this)" class="fechar"><span>X</span></div>
+              <h2 class="h2Modal">Contatos</h2>
+              <br><br>
+
+
+            <h2 class="h2Modal">Telefones:</h2>
+
+              <p class="pModal">(21) 97400-6710<br>(21) 99589-7270<br>(21) 99136-7041<br><br></p>
+
+            <h2 class="h2Modal">E-mails:</h2>
+            <p class="pModal">bellasFlores@gmail.com<br>bellasFlores@hotmail.com<br></p>
+            <br><br>
+
+             <h2 class="h2Modal"> Endereços onde nossas lojas se encontram:</h2>
+            <p class="pModal"> Avenida Principal, 101 - Riverside<br>Rua das Acácias, 123 - Willow Springs<br>Alameda das Flores, 234 - Maplewood</p>
+
+             <br>
+
+            <h2 class="h2Modal">Nossas Redes Sociais:</h2>
+           
+            <div class="icones">
+               <a href="https://www.instagram.com/"><div class="imgIcon" ><img src="img/imageInsta.png"/></div></a>
+              <a href="https://www.facebook.com/"><div class="imgIcon"><img src="img/imageFace.webp"/></div></a>
+               <a href="https://www.twitter.com/"><div class="imgIcon"><img src="img/imageTT.png" alt="Twitter"></div></a>
+              <a href="https://web.whatsapp.com/"><div class="imgIcon"><img src="img/imaheWhats.png"/></div></a>
+            </div>
+
+
+
+          </div>
+
+            <li><a href="ad.html" class="pModal">Ajuda e Documentação</a></li>
+            <li><a class="pModal">Termos e Condições</a></li>
+            <li><a class="pModal">Política de Segurança</a></li>
+            <li><a href ="ad.html" class="pModal">Trocas e Devoluções</a></li>
+        </ul>
+    </nav>
+
+    <br><br>
+
+    <a href="https://www.instagram.com/"><div class="imgIcon2"><img src="img/imageInsta.png" alt="Instagram"></div></a>
+    <a href="https://www.facebook.com/"><div class="imgIcon2"><img src="img/imageFace.webp" alt="Facebook"></div></a>
+    <a href="https://www.twitter.com/"><div class="imgIcon2"><img src="img/imageTT.png" alt="Twitter"></div></a>
+      <a href="https://web.whatsapp.com/"><div class="imgIcon2"><img src="img/imaheWhats.png"/></div></a>
+
+    <div class="imgIcon2"><img src = "img/imageVoz.png"/></button></div> 
+
+        <div class="imgIcon2">
+          <div onclick="acao(this)"><img src="img/libras.png" /></div>
+
+          <div class="modal">
+            <div onclick="fechar(this)" class="fechar"><span>X</span></div><br><br>
+            <h2 class="h2Modal">Acessibilidade</h2>
+            <br>
+
+      <center><div class="imgAcess"><img src="imageAcess2.jpg"/></div></center>
+         <p class="pModal">Deseja ter acessibilidade em libras?</p> <br><br>
+            <input type="submit" value="Sim" class="btn2" /> </center>
+             <input type="submit" value="Não" class="btn2" /> </center>
+          </div>
+    </div>
+
+    <br><br>
+    <p>&copy; 2023 Venda de Flores</p>
+  </footer>
+
+  <div class="chat-button" id="chat-button">
+    <i class="fas fa-comment-alt"></i>
+    <span>Chat de Suporte</span>
+  </div>
+  <div class="divCarrinho">
+
+  </div>
+  <!-- Conteúdo do chat (inicialmente oculto) -->
+  <div class="chat-box" id="chat-box">
+    <div class="chat-header">
+      Chat de Suporte
+      <button id="close-chat" class="close-button">Fechar</button>
+    </div>
+    <div class="chat-messages">
+      <!-- Aqui você pode adicionar as mensagens do chat -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="message-input" placeholder="Digite sua mensagem...">
+      <button id="send-message" class="send-button">Enviar</button>
+    </div>
+  </div>
+
+
+
+
+  <script src="script.js"></script>
+  <script src="navegacao.js"></script>
+   <script src="modal.js"></script>
+</body>
+
+</html>
